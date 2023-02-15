@@ -1,11 +1,11 @@
 
-const noPhoto='../assets/images/no_photo.png'
-let Data=[{id:0,price:600,name:'Тарелка керамическая ручной работы  ⌀ 12',newItem:false,popular:false,star:null,prevPrice:810,photo:null,count:0,},{id:1,price:0,name:'Кашпо для цветов керамическое  СИМПЛГРЕЙ',newItem:false,popular:false,star:null,prevPrice:null,photo:'../assets/images/kashpo.jpg',count:0,},{id:2,price:12999,name:'Умные часы SMARTWATCH XM 109 черный',newItem:false,popular:true,prevPrice:null,photo:'../assets/images/watches.png',count:1,},{id:3,price:15700,name:'Золотое кольцо МАЛИКА с аметистом и фианитами',newItem:true,popular:false,prevPrice:null,photo:'../assets/images/ring.png',count:0,},{id:4,price:15700,name:'Золотое кольцо МАЛИКА с аметистом и фианитами',newItem:true,popular:false,prevPrice:null,photo:'../assets/images/ring.png',count:0,},]
+const noPhoto='./assets/images/no_photo.png'
+let Data=[{id:0,price:600,name:'Тарелка керамическая ручной работы  ⌀ 12',newItem:false,popular:false,star:null,prevPrice:810,photo:null,count:0,},{id:1,price:0,name:'Кашпо для цветов керамическое  СИМПЛГРЕЙ',newItem:false,popular:false,star:null,prevPrice:null,photo:'./assets/images/kashpo.jpg',count:0,},{id:2,price:12999,name:'Умные часы SMARTWATCH XM 109 черный',newItem:false,popular:true,prevPrice:null,photo:'./assets/images/watches.png',count:1,},{id:3,price:15700,name:'Золотое кольцо МАЛИКА с аметистом и фианитами',newItem:true,popular:false,prevPrice:null,photo:'./assets/images/ring.png',count:0,},{id:4,price:15700,name:'Золотое кольцо МАЛИКА с аметистом и фианитами',newItem:true,popular:false,prevPrice:null,photo:'./assets/images/ring.png',count:0,},]
 let a=''
 Data=Data.map(({price,name,photo,prevPrice,popular,newItem,id,count})=>{a+=` <li style="position-relative" class="card">
     <img class="photo"  src="${photo ? photo : noPhoto}" />
-    <img class="heart" src="../assets/icons/heart.png"/>
-    <img class="weights" src="../assets/icons/weights.png"/>
+    <img class="heart" src="./assets/icons/heart.png"/>
+    <img class="weights" src="./assets/icons/weights.png"/>
     ${popular ? `<div class="popular">ХИТ</div>` : ''}
     ${newItem ? `<div class="newItem">NEW</div>` : ''}
     <div class="photo-switcher">
@@ -26,7 +26,7 @@ Data=Data.map(({price,name,photo,prevPrice,popular,newItem,id,count})=>{a+=` <li
        <span class="count" id="${id}">${count}</span>
        <button class="count-block__btn plus" id="${id}">+</button>
       </div>
-      <button class="store-btn"><img  src="../assets/icons/store.png"/> В корзину</button>
+      <button class="store-btn"><img  src="./assets/icons/store.png"/> В корзину</button>
     </div>
     </li>
     `
